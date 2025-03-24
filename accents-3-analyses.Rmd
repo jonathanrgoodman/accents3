@@ -282,6 +282,27 @@ accent.CIs <- data.frame(
     quantile(logistic(detection.model2.post$b_participant.accentGlasgow), c(0.975)),
     quantile(logistic(detection.model2.post$b_participant.accentNortheastEnglandDurhamandNewcastle), c(0.975)),
     quantile(logistic(detection.model2.post$b_participant.accentReceivedPronunciationRP), c(0.975))
+  ),
+
+  Difference_Low = c(
+    NA,
+    quantile(logistic(detection.model2.post$b_participant.accentIdonotspeaknaturallyinoneoftheaboveaccents.) - logistic(detection.model2.post$b_participant.accentBelfast), c(0.025)),
+    quantile(logistic(detection.model2.post$b_participant.accentIdonotspeaknaturallyinoneoftheaboveaccents.) - logistic(detection.model2.post$b_participant.accentBristol), c(0.025)),
+    quantile(logistic(detection.model2.post$b_participant.accentIdonotspeaknaturallyinoneoftheaboveaccents.) - logistic(detection.model2.post$b_participant.accentDublin), c(0.025)),
+    quantile(logistic(detection.model2.post$b_participant.accentIdonotspeaknaturallyinoneoftheaboveaccents.) - logistic(detection.model2.post$b_participant.accentEssex), c(0.025)),
+    quantile(logistic(detection.model2.post$b_participant.accentIdonotspeaknaturallyinoneoftheaboveaccents.) - logistic(detection.model2.post$b_participant.accentGlasgow), c(0.025)),
+    quantile(logistic(detection.model2.post$b_participant.accentIdonotspeaknaturallyinoneoftheaboveaccents.) - logistic(detection.model2.post$b_participant.accentNortheastEnglandDurhamandNewcastle), c(0.025)),
+    quantile(logistic(detection.model2.post$b_participant.accentIdonotspeaknaturallyinoneoftheaboveaccents.) - logistic(detection.model2.post$b_participant.accentReceivedPronunciationRP), c(0.025))
+  ),
+  Difference_High = c(
+    NA,
+    quantile(logistic(detection.model2.post$b_participant.accentIdonotspeaknaturallyinoneoftheaboveaccents.) - logistic(detection.model2.post$b_participant.accentBelfast), c(0.975)),
+    quantile(logistic(detection.model2.post$b_participant.accentIdonotspeaknaturallyinoneoftheaboveaccents.) - logistic(detection.model2.post$b_participant.accentBristol), c(0.975)),
+    quantile(logistic(detection.model2.post$b_participant.accentIdonotspeaknaturallyinoneoftheaboveaccents.) - logistic(detection.model2.post$b_participant.accentDublin), c(0.975)),
+    quantile(logistic(detection.model2.post$b_participant.accentIdonotspeaknaturallyinoneoftheaboveaccents.) - logistic(detection.model2.post$b_participant.accentEssex), c(0.975)),
+    quantile(logistic(detection.model2.post$b_participant.accentIdonotspeaknaturallyinoneoftheaboveaccents.) - logistic(detection.model2.post$b_participant.accentGlasgow), c(0.975)),
+    quantile(logistic(detection.model2.post$b_participant.accentIdonotspeaknaturallyinoneoftheaboveaccents.) - logistic(detection.model2.post$b_participant.accentNortheastEnglandDurhamandNewcastle), c(0.975)),
+    quantile(logistic(detection.model2.post$b_participant.accentIdonotspeaknaturallyinoneoftheaboveaccents.) - logistic(detection.model2.post$b_participant.accentReceivedPronunciationRP), c(0.975))
   )
 )
 
@@ -460,6 +481,18 @@ country.CIs <- data.frame(
     quantile(logistic(detection.model3.post$b_country.code1), c(0.975)),
     quantile(logistic(detection.model3.post$b_country.code2), c(0.975)),
     quantile(logistic(detection.model3.post$b_country.code3), c(0.975))
+  ),
+  Difference_Low = c(
+    "Reference",
+    quantile(logistic(detection.model3.post$b_country.code1) - logistic(detection.model3.post$b_country.code0), c(0.025)),
+    quantile(logistic(detection.model3.post$b_country.code2) - logistic(detection.model3.post$b_country.code0), c(0.025)),
+    quantile(logistic(detection.model3.post$b_country.code3) - logistic(detection.model3.post$b_country.code0), c(0.025))
+  ),
+  Difference_High = c(
+    "Reference",
+    quantile(logistic(detection.model3.post$b_country.code1) - logistic(detection.model3.post$b_country.code0), c(0.975)),
+    quantile(logistic(detection.model3.post$b_country.code2) - logistic(detection.model3.post$b_country.code0), c(0.975)),
+    quantile(logistic(detection.model3.post$b_country.code3) - logistic(detection.model3.post$b_country.code0), c(0.975))
   )
 )
 
